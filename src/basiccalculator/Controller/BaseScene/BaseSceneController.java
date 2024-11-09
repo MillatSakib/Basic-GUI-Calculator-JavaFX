@@ -11,16 +11,18 @@ import javafx.scene.control.TextField;
 
 
 public class BaseSceneController implements Initializable {
-
+String operator = "";
+double number1 = 0;
     @FXML
     private TextField display;
     @FXML
     private void handleClick(ActionEvent Event){
-        System.out.println("Calculator off");
+        System.exit(1);
     }
     @FXML
     private void allCrlear(ActionEvent Event){
-        
+        number1=0;
+        operator = "";
         display.setText("");
     }
     @FXML
@@ -38,7 +40,9 @@ public class BaseSceneController implements Initializable {
     }
     @FXML
     private void operatorAction(ActionEvent Event){
-        System.out.println("Hello worldsdff");
+        number1 = Double.parseDouble(display.getText());
+         operator = ((Button)Event.getSource()).getText();
+        display.setText("");
     }
     @FXML
         private void persentageButtonAction(ActionEvent Event){
@@ -47,6 +51,23 @@ public class BaseSceneController implements Initializable {
        @FXML
         private void dotButtonAction(ActionEvent Event){
         System.out.println("Hello worldsdff");
+    }
+        
+        @FXML
+        private void resultButtonAction(ActionEvent Event){
+        double number2 = Double.parseDouble(display.getText());
+        if(operator.equals("+")){
+        display.setText(""+(number1+number2));
+        }
+        else if(operator.equals("-")){
+        display.setText(""+(number1-number2));
+        }
+        else if(operator.equals("X")){
+        display.setText(""+(number1*number2));
+        }
+        else if(operator.equals("/")){
+        display.setText(""+(number1/number2));
+        }
     }
     
     @Override
