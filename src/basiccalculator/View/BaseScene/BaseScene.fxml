@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="423.0" prefWidth="305.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="423.0" prefWidth="305.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="basiccalculator.Controller.BaseScene.BaseSceneController">
    <children>
       <TextField alignment="TOP_RIGHT" editable="false" prefHeight="88.0" prefWidth="305.0">
          <font>
@@ -130,7 +129,7 @@
                   <Font size="23.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="74.0" prefWidth="89.0" style="-fx-background-color: #463e3e;" text="OFF" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#handleClick" prefHeight="74.0" prefWidth="89.0" style="-fx-background-color: #463e3e;" text="OFF" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
